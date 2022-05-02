@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[1:18]","start":1651413401971,"end":1651413404089,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[1:18] 19:26:41.971-19:26:44.089 Verify the LinkageAPI with all mandatory body parameters","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[2:30]","start":1651413404093,"end":1651413405511,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[2:30] 19:26:44.093-19:26:45.511 Verify the LinkageAPI with invalid lastFourDigitsCardNumber in body parameters","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[3:45]","start":1651413405514,"end":1651413406955,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[3:45] 19:26:45.514-19:26:46.955 Verify the LinkageAPI with invalid citiCardHolderPhoneNumber in body parameters","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[4:60]","start":1651413406962,"end":1651413408443,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[4:60] 19:26:46.962-19:26:48.443 Verify the LinkageAPI with invalid merchantCustomerReferenceId in body parameters","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

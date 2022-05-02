@@ -1,0 +1,4293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_pb7428bpWvS2BLY4EwJ6tS1Y8IlVclo5LPTSmSbm5n8',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("c8c6bda7-fbeb-485b-81e9-131a5c732596",{name:"vimalrajv"});
+    posthog.capture("report_feature",{karate_version:"1.2.0.RC6",karate_meta:null});
+  }
+});  
+</script>
+  
+    <title>src.test.java.com.FeatureFiles.LinkageAPI_UnitTesting</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">5</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-05-01 07:39:53 pm</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:18]"><span>[1:18]</span> <span>Verify the LinkageAPI with all mandatory body parameters</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2:30]"><span>[2:30]</span> <span>Verify the LinkageAPI with invalid lastFourDigitsCardNumber in body parameters</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:45]"><span>[3:45]</span> <span>Verify the LinkageAPI with invalid citiCardHolderPhoneNumber in body parameters</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4:60]"><span>[4:60]</span> <span>Verify the LinkageAPI with invalid merchantCustomerReferenceId in body parameters</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5:75]"><span>[5:75]</span> <span>Verify the LinkageAPI with invalid Authorization credentials in the request</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">API level unit testing for linkage service</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:18]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:18]</span>
+                <span class="scenario-name">Verify the LinkageAPI with all mandatory body parameters</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2180</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:18]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">53</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/clientCredentials/oauth2/token/hk/gcb&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-www-form-urlencoded&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;grant_type=client_credentials&amp;scope=/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">945</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">19:39:45.573 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/clientCredentials/oauth2/token/hk/gcb
+1 &gt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Content-Length: 40
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+grant_type=client_credentials&amp;scope=/api
+
+19:39:46.241 response time in milliseconds: 661
+1 &lt; 200
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; Content-Type: application/json
+1 &lt; Content-Type: application/json
+1 &lt; X-Global-Transaction-ID: ddade3ba626e9473a201c521
+1 &lt; X-Akamai-True-Client-IP: 85.154.175.224
+1 &lt; Pragma: no-cache
+1 &lt; X-DataStream-Session-Id: a11f57161-626e9473-141cef50
+1 &lt; X_AK_SHAPE_AGGREGATOR_IP: FALSE
+1 &lt; X-Akamai-CONFIG-LOG-DETAIL: true
+1 &lt; Akamai-Origin-Hop: 2
+1 &lt; X-Forwarded-For: 85.154.175.224, 82.178.158.46
+1 &lt; Cache-Control: no-cache, max-age=0
+1 &lt; X-Client-IP: 23.205.102.68,169.175.61.93,153.40.245.130
+1 &lt; dmz-global-txn-id: ddade3ba626e9473a201c521
+1 &lt; X-Archived-Client-IP: 23.205.102.68,23.205.102.68,169.175.61.93
+1 &lt; countryCode: HK
+1 &lt; businessCode: GCB
+1 &lt; scope: /api
+1 &lt; channelId: SSA
+1 &lt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa,5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+1 &lt; client_secret: uG2yJ7aN2vD3dW3tL7uU8fJ8tM8oG2wR0qP0kG6aC0jX5eP2hY
+1 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,59;
+1 &lt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Content-Length: 393
+1 &lt; Date: Sun, 01 May 2022 14:08:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415331000; Expires=Fri, 07 Aug 54353 22:59:46 GMT; Domain=sandbox.apihub.citi.com; Secure
+1 &lt; Set-Cookie: _abck=EFE2A878192FFDEAA15CBDA7744ECAE3~-1~YAAQLp6yUvFW8HKAAQAAFOPzfwdUFNDCYUep19c84/JWgDFI2LwhK+CODbttkxHsh9CvOmuYXKAHSaOf6yNYXXKUC4v+y6ONgtqy0p4yf5eci2XRXb1W3YJQimKUWkgvfgyPQ6yiWOF5XfP8sGT17dKoFO6XDv8VKPaNHiKwatFsH5IjeVuHa6s+RWlKyqFQ0rfnsBJRZY/6wifdxpEMwN9g6RcZrkXQ/XhoDYQCM4U9cdceHadIk+cax0/TcijdtBX1g6RONKthxqZWgO1HyNni30TddoEwFQeA65+EhYL0OrGphLWwO+/6z+PJ7v5hcqss8FricyNUj0CBqXoHXLDXvHYLB9RfqR12PZZNdP52+bQOQh5GCug=~-1~-1~-1; Max-Age=1682950131000; Expires=Fri, 24 Nov 55352 01:39:46 GMT; Domain=citi.com; Secure
+1 &lt; Set-Cookie: bm_sz=0274B7919857E9B424E3101FD17F84D9~YAAQLp6yUvJW8HKAAQAAFOPzfw8SwXOwPcVhzAlEJuDwK84+mThNtpPXnY13W1gFhL8c9GALguaTfBkVZAL8nGZA9kKlFfGZla3uSXqTwfGGrPdC6Z8QB2dV0O3wRSqksadeqZOlotQsU8jHRliAMqTQJwpJRp24Txc2luUXXnwiL135OK2G29kzCUeI8640cKi6vaDfIIRB6MfP0TeADpLxVcC7vKVK1kZnSBEXhxOfdjqsnriuk96VREUgHfdDNuwkzNVKFTvHpEBpmEKc2b5SR91rWMqmxvufcfAcJIdv~3553094~3486007; Max-Age=1651428531000; Expires=Thu, 07 Jan 54354 17:39:46 GMT; Domain=citi.com
+{ &quot;token_type&quot;:&quot;Bearer&quot;, &quot;access_token&quot;:&quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFh4TvAJQhR-Y2mJt_JjngWM9VVG4xVKxi4htWz31JQXqCQLsHw_ip1vgWjWc16zi9OPN_aN2FfHwdyT4oGcrswca_nrP-dzYuhRYi9egpKgQD_GL5K0jThxKuCl7ge0fYKa_H6DybkwGStvYMAXgQrsb0gfHPeE_jpeqqcdYjRqm7239lMegARgIyfgUNE_Ja67ETwRj9JJnIcoTyMmFXvko3En1qE8bdKgCmjFN0Q460&quot;, &quot;expires_in&quot;:1800, &quot;consented_on&quot;:1651414131, &quot;scope&quot;:&quot;/api&quot; }
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">43</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">19:39:46.302 [print] {
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;access_token&quot;: &quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFh4TvAJQhR-Y2mJt_JjngWM9VVG4xVKxi4htWz31JQXqCQLsHw_ip1vgWjWc16zi9OPN_aN2FfHwdyT4oGcrswca_nrP-dzYuhRYi9egpKgQD_GL5K0jThxKuCl7ge0fYKa_H6DybkwGStvYMAXgQrsb0gfHPeE_jpeqqcdYjRqm7239lMegARgIyfgUNE_Ja67ETwRj9JJnIcoTyMmFXvko3En1qE8bdKgCmjFN0Q460&quot;,
+  &quot;expires_in&quot;: 1800,
+  &quot;consented_on&quot;: 1651414131,
+  &quot;scope&quot;: &quot;/api&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.token_type == &#39;Bearer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">19</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.access_token != null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accessToken = response.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;AccessToken&#39;, accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">19:39:46.325 [print] AccessToken AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFh4TvAJQhR-Y2mJt_JjngWM9VVG4xVKxi4htWz31JQXqCQLsHw_ip1vgWjWc16zi9OPN_aN2FfHwdyT4oGcrswca_nrP-dzYuhRYi9egpKgQD_GL5K0jThxKuCl7ge0fYKa_H6DybkwGStvYMAXgQrsb0gfHPeE_jpeqqcdYjRqm7239lMegARgIyfgUNE_Ja67ETwRj9JJnIcoTyMmFXvko3En1qE8bdKgCmjFN0Q460 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def Auth = &#39;Bearer &#39;+accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/v1/apac/rewards/linkage&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = Auth</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header client_id = &#39;5ad84ff6-2ef9-402d-9cba-d12bfcb41faa&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;{&quot;lastFourDigitsCardNumber&quot;: &quot;8653&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;6590020056&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;6300804530034&quot;}&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1109</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">19:39:46.334 request:
+2 &gt; POST https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage
+2 &gt; Authorization: Bearer AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFh4TvAJQhR-Y2mJt_JjngWM9VVG4xVKxi4htWz31JQXqCQLsHw_ip1vgWjWc16zi9OPN_aN2FfHwdyT4oGcrswca_nrP-dzYuhRYi9egpKgQD_GL5K0jThxKuCl7ge0fYKa_H6DybkwGStvYMAXgQrsb0gfHPeE_jpeqqcdYjRqm7239lMegARgIyfgUNE_Ja67ETwRj9JJnIcoTyMmFXvko3En1qE8bdKgCmjFN0Q460
+2 &gt; Accept: application/json
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+2 &gt; Cookie: _abck=EFE2A878192FFDEAA15CBDA7744ECAE3~-1~YAAQLp6yUvFW8HKAAQAAFOPzfwdUFNDCYUep19c84/JWgDFI2LwhK+CODbttkxHsh9CvOmuYXKAHSaOf6yNYXXKUC4v+y6ONgtqy0p4yf5eci2XRXb1W3YJQimKUWkgvfgyPQ6yiWOF5XfP8sGT17dKoFO6XDv8VKPaNHiKwatFsH5IjeVuHa6s+RWlKyqFQ0rfnsBJRZY/6wifdxpEMwN9g6RcZrkXQ/XhoDYQCM4U9cdceHadIk+cax0/TcijdtBX1g6RONKthxqZWgO1HyNni30TddoEwFQeA65+EhYL0OrGphLWwO+/6z+PJ7v5hcqss8FricyNUj0CBqXoHXLDXvHYLB9RfqR12PZZNdP52+bQOQh5GCug=~-1~-1~-1; CITI_SITE=gtdc; bm_sz=0274B7919857E9B424E3101FD17F84D9~YAAQLp6yUvJW8HKAAQAAFOPzfw8SwXOwPcVhzAlEJuDwK84+mThNtpPXnY13W1gFhL8c9GALguaTfBkVZAL8nGZA9kKlFfGZla3uSXqTwfGGrPdC6Z8QB2dV0O3wRSqksadeqZOlotQsU8jHRliAMqTQJwpJRp24Txc2luUXXnwiL135OK2G29kzCUeI8640cKi6vaDfIIRB6MfP0TeADpLxVcC7vKVK1kZnSBEXhxOfdjqsnriuk96VREUgHfdDNuwkzNVKFTvHpEBpmEKc2b5SR91rWMqmxvufcfAcJIdv~3553094~3486007
+2 &gt; Content-Length: 124
+2 &gt; Host: sandbox.apihub.citi.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;lastFourDigitsCardNumber&quot;: &quot;8653&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;6590020056&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;6300804530034&quot;}
+
+19:39:47.441 response time in milliseconds: 1107
+2 &lt; 404
+2 &lt; X-Backside-Transport: FAIL FAIL,FAIL FAIL,FAIL FAIL
+2 &lt; Content-Type: text/plain
+2 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+2 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Max-Age: 2147483647
+2 &lt; Cache-Control: no-cache, no-store
+2 &lt; Expires: -1
+2 &lt; Pragma: no-cache
+2 &lt; Uuid: 074c07b7-44bc-4526-8654-7ae7a12a1cc4
+2 &lt; X-Application-Context: PSG-SANDBOX:utility,unsecured,stateless,service,regulatory,pcr,onboard,mutualfund,moneymovementpayee,moneymovement,linkage,insurance,hktv,customer,cardauth,card,banking,account,ids,approuting,override,uat1,sandbox,cloud:2
+2 &lt; X-Cf-Routererror: unknown_route
+2 &lt; X-Vcap-Request-Id: 6de04d17-9a0e-4bf3-4ae2-a0cfa14d8c80
+2 &lt; X-Global-Transaction-ID: 6e68aa42626e9474cb767faf
+2 &lt; Access-Control-Allow-Origin: 
+2 &lt; Access-Control-Allow-Credentials: true
+2 &lt; mfaCode: 9ghTPJL4MEi4i2YJyqElroQWdlg%2B5rqGD6axy9%2FCJ3gMLF%2BCIzNyVxoRZVM%2BsC5ozy6scVM%2FxW8txTdE%2BvTN8Yyxwbg%2F1UgI2IvtDZUoZYOjg43JvNVQ%2FWkWglfXBTiWSx%2FcRtTTZ4Ah0yeQ54MbSviyCkzWBWa%2Bqw27xS4BEyf8tPrPK2HUZ%2B02shHJuQjfrbra2vIEBUDsQ9AK5LTFixj65aF0NURLr2jNsZ4xsnI7tgiC%2B8W%2BqFAsuNVJ68QomGNt3%2BNwLI3ERxVEw4RrjInPege3Byjz5Qz%2FxQwxilqVhyymN9GZdlxlRmAVBAKF3sIuMGhalLQUNHMBQyt%2FZEsryghuCyZGLE0p%2FsKCrWucrsOPgmihg0YoCRGMSIUfJpnSCO3PT%2BdlYeLhI8gGJF5eR1%2Ba6O8iLqJe9JMYsgEvU69z%2BxsNzgsn6WjvJXhSUq0crUrv9jZtMM%2F%2BKKlA9g%3D%3D
+2 &lt; X-Akamai-CITISITE: GTDC
+2 &lt; Content-Length: 116
+2 &lt; Date: Sun, 01 May 2022 14:08:52 GMT
+2 &lt; Connection: close
+2 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415332000; Expires=Fri, 07 Aug 54353 23:16:27 GMT; Domain=sandbox.apihub.citi.com; Secure
+404 Not Found: Requested route (&#39;aad-p-statefullproc-xd-ap-uat1.apps-mw1-perf.apac.nsroot.net:443&#39;) does not exist.
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.27">19:39:47.442 src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:27
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 1107, url: https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage, response: 
+404 Not Found: Requested route (&#39;aad-p-statefullproc-xd-ap-uat1.apps-mw1-perf.apac.nsroot.net:443&#39;) does not exist.
+
+src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.rewardLinkCode != null</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:30]</span>
+                <span class="scenario-name">Verify the LinkageAPI with invalid lastFourDigitsCardNumber in body parameters</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1556</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/clientCredentials/oauth2/token/hk/gcb&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-www-form-urlencoded&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;grant_type=client_credentials&amp;scope=/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">500</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">19:39:47.448 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/clientCredentials/oauth2/token/hk/gcb
+1 &gt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Content-Length: 40
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+grant_type=client_credentials&amp;scope=/api
+
+19:39:47.947 response time in milliseconds: 499
+1 &lt; 200
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; Content-Type: application/json
+1 &lt; Content-Type: application/json
+1 &lt; X-Global-Transaction-ID: 98b6a370626e9474819d7a5d
+1 &lt; X-Akamai-True-Client-IP: 85.154.175.224
+1 &lt; Pragma: no-cache
+1 &lt; X-DataStream-Session-Id: a11f57161-626e9474-141cf969
+1 &lt; X_AK_SHAPE_AGGREGATOR_IP: FALSE
+1 &lt; X-Akamai-CONFIG-LOG-DETAIL: true
+1 &lt; Akamai-Origin-Hop: 2
+1 &lt; X-Forwarded-For: 85.154.175.224, 82.178.158.46
+1 &lt; Cache-Control: no-cache, max-age=0
+1 &lt; X-Client-IP: 23.205.102.68,169.175.115.119,169.177.209.51
+1 &lt; dmz-global-txn-id: 98b6a370626e9474819d7a5d
+1 &lt; X-Archived-Client-IP: 23.205.102.68,23.205.102.68,169.175.115.119
+1 &lt; countryCode: HK
+1 &lt; businessCode: GCB
+1 &lt; scope: /api
+1 &lt; channelId: SSA
+1 &lt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa,5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+1 &lt; client_secret: uG2yJ7aN2vD3dW3tL7uU8fJ8tM8oG2wR0qP0kG6aC0jX5eP2hY
+1 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,56;
+1 &lt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Content-Length: 393
+1 &lt; Date: Sun, 01 May 2022 14:08:53 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415333000; Expires=Fri, 07 Aug 54353 23:33:07 GMT; Domain=sandbox.apihub.citi.com; Secure
+1 &lt; Set-Cookie: _abck=431E12EFB0A1973D47CE3CD119E5D35B~-1~YAAQLp6yUvxW8HKAAQAA1OnzfweC8LSZ4pZfGXhP/hxoX+x02IwsAUtXlWQa2znIkX/Violp/M3KTgWI5V3qp+F4UCBbcnb5CjqjjtDnrpdz5sDQkOMspMTbFUXMKOIsVWm2zXfquOtYtLgqITd9HAWdllIL5+4ICiwRH9uMoh8Ve2AaMi6lHuMBHe2dLbJYUfZNXYma+rG5YgpNL3foUNd/Z29udtAyLsNG8zp75M1Q9pQXW3pLZ4mwbvIoFxu4VDKvbK7qBm7j/hUydraZcRa4G83EiTaESqUUXDSLRAIYkTE6z4Gy37dPtXuA9QbrcI5JbUjgjvYlk45VsyqH+FBLJZ6w6qAgPbg5p2wAQtuppiJ13CMG28Y=~-1~-1~-1; Max-Age=1682950133000; Expires=Fri, 24 Nov 55352 02:13:07 GMT; Domain=citi.com; Secure
+1 &lt; Set-Cookie: bm_sz=26C14FF005B50409B3056DB9B8F05B3C~YAAQLp6yUv1W8HKAAQAA1Onzfw/2F078Mqm4aRtMrueGmZTE8qhP3nXEvqeGxc3qlLyak+Sr8/mc3i81usfqrQw2TGwRD2WpHMDhAQvINUhJ/s5eMcUMJp72dRIP6s8pHLTCEAMn+xQUrJg5DbVQjTCpHpS+M3t+1LrHXfdSb8yWImbXOVYg/XSI+ta/yTeUMoTXd0uqXlDkPSUnPBnaDhLAKrzs6xrVAMznJCy7FhmzU3DjIc3PUTsi64tM+1IG6tNzGEBPmEjtM+ywZ/RODdYnzv339cfOW1bSEmiGoeo3~3163190~4539204; Max-Age=1651428532000; Expires=Thu, 07 Jan 54354 17:56:27 GMT; Domain=citi.com
+{ &quot;token_type&quot;:&quot;Bearer&quot;, &quot;access_token&quot;:&quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhzf7OHteVufGiplpaXDsjPmwHHVvSC2Su_AK33UQC7GbTTazDfY0yIMzPoZlGJyzTpKoo3cmXLmegJHZDU8sOfI2O0ylrZCyPuUPuLD9JogkOtOmhumsqJ9rvryB-SDibVg1PbGqwd67z2ivnx-arp-m6NHvAEBX4zfT1ei3gD2z0Ium2OKjYW5hHXfZYhahZXzluq6DVhRrBhmqBqi5dRwVlJuANMf8g_5eeGQY4KQk&quot;, &quot;expires_in&quot;:1800, &quot;consented_on&quot;:1651414133, &quot;scope&quot;:&quot;/api&quot; }
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">19:39:47.948 [print] {
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;access_token&quot;: &quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhzf7OHteVufGiplpaXDsjPmwHHVvSC2Su_AK33UQC7GbTTazDfY0yIMzPoZlGJyzTpKoo3cmXLmegJHZDU8sOfI2O0ylrZCyPuUPuLD9JogkOtOmhumsqJ9rvryB-SDibVg1PbGqwd67z2ivnx-arp-m6NHvAEBX4zfT1ei3gD2z0Ium2OKjYW5hHXfZYhahZXzluq6DVhRrBhmqBqi5dRwVlJuANMf8g_5eeGQY4KQk&quot;,
+  &quot;expires_in&quot;: 1800,
+  &quot;consented_on&quot;: 1651414133,
+  &quot;scope&quot;: &quot;/api&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.token_type == &#39;Bearer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.access_token != null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accessToken = response.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;AccessToken&#39;, accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">19:39:47.949 [print] AccessToken AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhzf7OHteVufGiplpaXDsjPmwHHVvSC2Su_AK33UQC7GbTTazDfY0yIMzPoZlGJyzTpKoo3cmXLmegJHZDU8sOfI2O0ylrZCyPuUPuLD9JogkOtOmhumsqJ9rvryB-SDibVg1PbGqwd67z2ivnx-arp-m6NHvAEBX4zfT1ei3gD2z0Ium2OKjYW5hHXfZYhahZXzluq6DVhRrBhmqBqi5dRwVlJuANMf8g_5eeGQY4KQk 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def Auth = &#39;Bearer &#39;+accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/v1/apac/rewards/linkage&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = Auth</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header client_id = &#39;5ad84ff6-2ef9-402d-9cba-d12bfcb41faa&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;{&quot;lastFourDigitsCardNumber&quot;: &quot;1234&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;6590020056&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;6300804530034&quot;}&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1052</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.38">19:39:47.951 request:
+2 &gt; POST https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage
+2 &gt; Authorization: Bearer AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhzf7OHteVufGiplpaXDsjPmwHHVvSC2Su_AK33UQC7GbTTazDfY0yIMzPoZlGJyzTpKoo3cmXLmegJHZDU8sOfI2O0ylrZCyPuUPuLD9JogkOtOmhumsqJ9rvryB-SDibVg1PbGqwd67z2ivnx-arp-m6NHvAEBX4zfT1ei3gD2z0Ium2OKjYW5hHXfZYhahZXzluq6DVhRrBhmqBqi5dRwVlJuANMf8g_5eeGQY4KQk
+2 &gt; Accept: application/json
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+2 &gt; Cookie: _abck=431E12EFB0A1973D47CE3CD119E5D35B~-1~YAAQLp6yUvxW8HKAAQAA1OnzfweC8LSZ4pZfGXhP/hxoX+x02IwsAUtXlWQa2znIkX/Violp/M3KTgWI5V3qp+F4UCBbcnb5CjqjjtDnrpdz5sDQkOMspMTbFUXMKOIsVWm2zXfquOtYtLgqITd9HAWdllIL5+4ICiwRH9uMoh8Ve2AaMi6lHuMBHe2dLbJYUfZNXYma+rG5YgpNL3foUNd/Z29udtAyLsNG8zp75M1Q9pQXW3pLZ4mwbvIoFxu4VDKvbK7qBm7j/hUydraZcRa4G83EiTaESqUUXDSLRAIYkTE6z4Gy37dPtXuA9QbrcI5JbUjgjvYlk45VsyqH+FBLJZ6w6qAgPbg5p2wAQtuppiJ13CMG28Y=~-1~-1~-1; CITI_SITE=gtdc; bm_sz=26C14FF005B50409B3056DB9B8F05B3C~YAAQLp6yUv1W8HKAAQAA1Onzfw/2F078Mqm4aRtMrueGmZTE8qhP3nXEvqeGxc3qlLyak+Sr8/mc3i81usfqrQw2TGwRD2WpHMDhAQvINUhJ/s5eMcUMJp72dRIP6s8pHLTCEAMn+xQUrJg5DbVQjTCpHpS+M3t+1LrHXfdSb8yWImbXOVYg/XSI+ta/yTeUMoTXd0uqXlDkPSUnPBnaDhLAKrzs6xrVAMznJCy7FhmzU3DjIc3PUTsi64tM+1IG6tNzGEBPmEjtM+ywZ/RODdYnzv339cfOW1bSEmiGoeo3~3163190~4539204
+2 &gt; Content-Length: 124
+2 &gt; Host: sandbox.apihub.citi.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;lastFourDigitsCardNumber&quot;: &quot;1234&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;6590020056&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;6300804530034&quot;}
+
+19:39:49.003 response time in milliseconds: 1051
+2 &lt; 404
+2 &lt; X-Backside-Transport: FAIL FAIL,FAIL FAIL,FAIL FAIL
+2 &lt; Content-Type: text/plain
+2 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+2 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Max-Age: 2147483647
+2 &lt; Cache-Control: no-cache, no-store
+2 &lt; Expires: -1
+2 &lt; Pragma: no-cache
+2 &lt; Uuid: 4136c35d-5593-4fd2-b18b-516ab0556001
+2 &lt; X-Application-Context: PSG-SANDBOX:utility,unsecured,stateless,service,regulatory,pcr,onboard,mutualfund,moneymovementpayee,moneymovement,linkage,insurance,hktv,customer,cardauth,card,banking,account,ids,approuting,override,uat1,sandbox,cloud:1
+2 &lt; X-Cf-Routererror: unknown_route
+2 &lt; X-Vcap-Request-Id: cd188b7a-f796-4209-7691-fc29508fe73d
+2 &lt; X-Global-Transaction-ID: 126374ce626e94755046b9b1
+2 &lt; Access-Control-Allow-Origin: 
+2 &lt; Access-Control-Allow-Credentials: true
+2 &lt; mfaCode: L7dnkBMYKDKqd%2F8kQDCcC9eIZKHKT2Po80ZNitittjGJDxM%2BK19NrV2HU3V%2FC%2F479RB295HcPrVvTJfRZdKROz%2Fe8GWrjPzCShfI2DfGpLOY%2FJHXCVozaYEgWPUqXOvNQsLquo8ikx6WwMz88w7KbAfW9R2ES0%2Fym0Us5FpFDj9JhaurkQtOlQjnpczpIRN4psm9LjFcw4TUU0nfRnYJ2gYsqURuC4PjVJowPp9ElCWZqZkBk4csCTSCFhts4G18gmdaz%2BNKv5fcECz4dpGBzRsAz%2BgRkGKd%2FFwfMT3gCI66VwU5Az5amOpmlds0V3tCo%2FJB0X5wm0d8T0vOz7uZ5tT%2FwalVVFJHN73KRlWUsq39a9GWaOQjeoC%2BnmQMWXTrD4di3yeuGOjbz5agqblJ5ryOEw%2FuVNZnZBoSg2iaq3FhuOE3iw23VeHuEVX616Dr7e64hY0UpHtI1TxpCPC4fg%3D%3D
+2 &lt; X-Akamai-CITISITE: GTDC
+2 &lt; Content-Length: 116
+2 &lt; Date: Sun, 01 May 2022 14:08:54 GMT
+2 &lt; Connection: close
+2 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415334000; Expires=Fri, 07 Aug 54353 23:49:49 GMT; Domain=sandbox.apihub.citi.com; Secure
+404 Not Found: Requested route (&#39;aad-p-statefullproc-xd-ap-uat1.apps-mw1-perf.apac.nsroot.net:443&#39;) does not exist.
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref failed">39</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.39">19:39:49.003 src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:39
+Then status 400
+status code was: 404, expected: 400, response time in milliseconds: 1051, url: https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage, response: 
+404 Not Found: Requested route (&#39;aad-p-statefullproc-xd-ap-uat1.apps-mw1-perf.apac.nsroot.net:443&#39;) does not exist.
+
+src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:39
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref skipped">40</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref skipped">41</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.type == &#39;invalid&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref skipped">42</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;invalidRequest&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref skipped">43</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.details == &#39;Missing or invalid parameters&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:45]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:45]</span>
+                <span class="scenario-name">Verify the LinkageAPI with invalid citiCardHolderPhoneNumber in body parameters</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>996</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:45]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/clientCredentials/oauth2/token/hk/gcb&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-www-form-urlencoded&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;grant_type=client_credentials&amp;scope=/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">475</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">19:39:49.008 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/clientCredentials/oauth2/token/hk/gcb
+1 &gt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Content-Length: 40
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+grant_type=client_credentials&amp;scope=/api
+
+19:39:49.481 response time in milliseconds: 473
+1 &lt; 200
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; Content-Type: application/json
+1 &lt; Content-Type: application/json
+1 &lt; X-Global-Transaction-ID: 6e68aa42626e94767cd9ff8d
+1 &lt; X-Akamai-True-Client-IP: 85.154.175.224
+1 &lt; Pragma: no-cache
+1 &lt; X-DataStream-Session-Id: a11f57161-626e9476-141d0269
+1 &lt; X_AK_SHAPE_AGGREGATOR_IP: FALSE
+1 &lt; X-Akamai-CONFIG-LOG-DETAIL: true
+1 &lt; Akamai-Origin-Hop: 2
+1 &lt; X-Forwarded-For: 85.154.175.224, 82.178.158.46
+1 &lt; Cache-Control: no-cache, max-age=0
+1 &lt; X-Client-IP: 23.64.120.184,169.175.115.121,169.177.209.50
+1 &lt; dmz-global-txn-id: 6e68aa42626e94767cd9ff8d
+1 &lt; X-Archived-Client-IP: 23.64.120.184,23.64.120.184,169.175.115.121
+1 &lt; countryCode: HK
+1 &lt; businessCode: GCB
+1 &lt; scope: /api
+1 &lt; channelId: SSA
+1 &lt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa,5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+1 &lt; client_secret: uG2yJ7aN2vD3dW3tL7uU8fJ8tM8oG2wR0qP0kG6aC0jX5eP2hY
+1 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,55;
+1 &lt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Content-Length: 393
+1 &lt; Date: Sun, 01 May 2022 14:08:54 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415334000; Expires=Fri, 07 Aug 54353 23:49:49 GMT; Domain=sandbox.apihub.citi.com; Secure
+1 &lt; Set-Cookie: _abck=2D89D6EF172B2B21B0EFCC4F8830815E~-1~YAAQLp6yUgFX8HKAAQAA1e/zfwdYSz82XWN0twA/Nr7vQsmhfg32QlTKj3nhghp68c2DKEwL5kAL3pdbb4Tt4E2/XF2l0TajHlz35IPzqGd0Ow5OPX8bOjqH0niru6T6VevaBA916PXrJQYQ5b82bh1rZm4k00s3TfSs/7QJchwKHsVYSaaWsDiHpF2T++gtLz/TvubCvgMzD6XM0JeFxFebW+tZhv++6nAeQHXH0r2bx1r4Ga8ZMV8WBNwDK5nEa+JSRXvnfK+J0wDdmNZL9T5uJJBKZsLHD2OkYSzS7ztsdg5pvFNqtQjfnWldfRsBtF1Xaq5k6kTWEj2ve2h/6lG8q1vKXWD5kXLhElfL6/7prEW/hjQO7I8=~-1~-1~-1; Max-Age=1682950134000; Expires=Fri, 24 Nov 55352 02:29:49 GMT; Domain=citi.com; Secure
+1 &lt; Set-Cookie: bm_sz=10A026D95887C340D4D92A6129315E74~YAAQLp6yUgJX8HKAAQAA1e/zfw+LbJzzJ5DpkrQQL6I8luh+CBviEjdoF1lWrEfOW326oyuhpVPlwXbp96UCEvnrlj+X+N/O9VXqNNO2vA1f5s8DpBHlm+btfLuNDchINWn3TV3JcV6sGemNpuygZOFlIvW0SW4GGUk6qLTc7Xaa19QXsm225h6k25Q614/hP1mxQV2feAN5LOgtr6wu/2Qi1/HLM8yaLO1WDyG7uqGOwoYJGgOrnsG1APt1Tys+iuot+aRPu0fWA2IuZtt7xIXnojea3VAYpGPDF0ECEpnl~4276787~4277049; Max-Age=1651428534000; Expires=Thu, 07 Jan 54354 18:29:49 GMT; Domain=citi.com
+{ &quot;token_type&quot;:&quot;Bearer&quot;, &quot;access_token&quot;:&quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFh7hKarS6eccbpZHOW3PkSDZAqkqBHH72UvdFy5-D0ZBz0ByDE8Ui-nHPIJaWPD5Bk4V1Ke3wYGUmiLjzwbVSTzVsjc4sXD0W5w1cPcl0VTbpZNFIzWyBWwKyFIrk6Lq8R1F41MVVn50r0zGwLdsvnzSiw9OqXF1u3nyJ7g9glpVSkyCcp5ZoV9vZTDoxSPz7be708RSblt7rthXkb4fUVSQB8pnUWe0U8eZXInIWKMQ0&quot;, &quot;expires_in&quot;:1800, &quot;consented_on&quot;:1651414134, &quot;scope&quot;:&quot;/api&quot; }
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">19:39:49.483 [print] {
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;access_token&quot;: &quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFh7hKarS6eccbpZHOW3PkSDZAqkqBHH72UvdFy5-D0ZBz0ByDE8Ui-nHPIJaWPD5Bk4V1Ke3wYGUmiLjzwbVSTzVsjc4sXD0W5w1cPcl0VTbpZNFIzWyBWwKyFIrk6Lq8R1F41MVVn50r0zGwLdsvnzSiw9OqXF1u3nyJ7g9glpVSkyCcp5ZoV9vZTDoxSPz7be708RSblt7rthXkb4fUVSQB8pnUWe0U8eZXInIWKMQ0&quot;,
+  &quot;expires_in&quot;: 1800,
+  &quot;consented_on&quot;: 1651414134,
+  &quot;scope&quot;: &quot;/api&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.token_type == &#39;Bearer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.access_token != null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accessToken = response.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;AccessToken&#39;, accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">19:39:49.484 [print] AccessToken AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFh7hKarS6eccbpZHOW3PkSDZAqkqBHH72UvdFy5-D0ZBz0ByDE8Ui-nHPIJaWPD5Bk4V1Ke3wYGUmiLjzwbVSTzVsjc4sXD0W5w1cPcl0VTbpZNFIzWyBWwKyFIrk6Lq8R1F41MVVn50r0zGwLdsvnzSiw9OqXF1u3nyJ7g9glpVSkyCcp5ZoV9vZTDoxSPz7be708RSblt7rthXkb4fUVSQB8pnUWe0U8eZXInIWKMQ0 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def Auth = &#39;Bearer &#39;+accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/v1/apac/rewards/linkage&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = Auth</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header client_id = &#39;5ad84ff6-2ef9-402d-9cba-d12bfcb41faa&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;{&quot;lastFourDigitsCardNumber&quot;: &quot;8653&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;1111111111&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;6300804530034&quot;}&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">517</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.53">19:39:49.487 request:
+2 &gt; POST https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage
+2 &gt; Authorization: Bearer AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFh7hKarS6eccbpZHOW3PkSDZAqkqBHH72UvdFy5-D0ZBz0ByDE8Ui-nHPIJaWPD5Bk4V1Ke3wYGUmiLjzwbVSTzVsjc4sXD0W5w1cPcl0VTbpZNFIzWyBWwKyFIrk6Lq8R1F41MVVn50r0zGwLdsvnzSiw9OqXF1u3nyJ7g9glpVSkyCcp5ZoV9vZTDoxSPz7be708RSblt7rthXkb4fUVSQB8pnUWe0U8eZXInIWKMQ0
+2 &gt; Accept: application/json
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+2 &gt; Cookie: _abck=2D89D6EF172B2B21B0EFCC4F8830815E~-1~YAAQLp6yUgFX8HKAAQAA1e/zfwdYSz82XWN0twA/Nr7vQsmhfg32QlTKj3nhghp68c2DKEwL5kAL3pdbb4Tt4E2/XF2l0TajHlz35IPzqGd0Ow5OPX8bOjqH0niru6T6VevaBA916PXrJQYQ5b82bh1rZm4k00s3TfSs/7QJchwKHsVYSaaWsDiHpF2T++gtLz/TvubCvgMzD6XM0JeFxFebW+tZhv++6nAeQHXH0r2bx1r4Ga8ZMV8WBNwDK5nEa+JSRXvnfK+J0wDdmNZL9T5uJJBKZsLHD2OkYSzS7ztsdg5pvFNqtQjfnWldfRsBtF1Xaq5k6kTWEj2ve2h/6lG8q1vKXWD5kXLhElfL6/7prEW/hjQO7I8=~-1~-1~-1; CITI_SITE=gtdc; bm_sz=10A026D95887C340D4D92A6129315E74~YAAQLp6yUgJX8HKAAQAA1e/zfw+LbJzzJ5DpkrQQL6I8luh+CBviEjdoF1lWrEfOW326oyuhpVPlwXbp96UCEvnrlj+X+N/O9VXqNNO2vA1f5s8DpBHlm+btfLuNDchINWn3TV3JcV6sGemNpuygZOFlIvW0SW4GGUk6qLTc7Xaa19QXsm225h6k25Q614/hP1mxQV2feAN5LOgtr6wu/2Qi1/HLM8yaLO1WDyG7uqGOwoYJGgOrnsG1APt1Tys+iuot+aRPu0fWA2IuZtt7xIXnojea3VAYpGPDF0ECEpnl~4276787~4277049
+2 &gt; Content-Length: 124
+2 &gt; Host: sandbox.apihub.citi.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;lastFourDigitsCardNumber&quot;: &quot;8653&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;1111111111&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;6300804530034&quot;}
+
+19:39:50.003 response time in milliseconds: 516
+2 &lt; 404
+2 &lt; X-Backside-Transport: FAIL FAIL,FAIL FAIL,FAIL FAIL
+2 &lt; Content-Type: text/plain
+2 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+2 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Max-Age: 2147483647
+2 &lt; Cache-Control: no-cache, no-store
+2 &lt; Expires: -1
+2 &lt; Pragma: no-cache
+2 &lt; Uuid: 86298090-7f1f-4212-aabb-1376f656805a
+2 &lt; X-Application-Context: PSG-SANDBOX:utility,unsecured,stateless,service,regulatory,pcr,onboard,mutualfund,moneymovementpayee,moneymovement,linkage,insurance,hktv,customer,cardauth,card,banking,account,ids,approuting,override,uat1,sandbox,cloud:0
+2 &lt; X-Cf-Routererror: unknown_route
+2 &lt; X-Vcap-Request-Id: 6496b14b-45b9-4789-70f4-76ed235880ea
+2 &lt; X-Global-Transaction-ID: 98b6a370626e9476819f7a6d
+2 &lt; Access-Control-Allow-Origin: 
+2 &lt; Access-Control-Allow-Credentials: true
+2 &lt; mfaCode: 7PELGfLPkPkIj%2BmtGZ%2FXqA%2F4epzCI%2Bsl9DLepFuOO9uXE6cGBdAfRbIc%2FgeMFpAZEtb6erwLk3yH%2FTOeZPGJpdw6YkzpXmi8kPoMyriaUT2S5Vwc5ylI6Yb5Qa0u0Dzt6l%2BGOeLv3OfEj3xSjVWw9EmS2ZcrbFK5TK1xgeU9%2Bc6qmbDpD5KKBM1%2FTqGpXsIMjeNLWCVm4jrJY2NeXTcfcWRRBz0gfO3oydSVq%2BprZMAtT6N6L%2FFtoeKx%2FONunMsrmih%2FZdtM03CWScfCWuJrNMewXAd80vy%2Fska0jdIe2dtlEuZKztkZJIK%2FnuwLbcFB3L2nOl160Srs1TdFtAVqEiEd%2F7pxq4bAvDUfoqJZBw3GfQfUg4A5KqxiTJGX4HDJlprUDwW5EeVG43Jr1UaFJbqv%2FmoRsXRNaHbJDX18wOXAaL9DhVXo6ydQAL6a7jPH3Okgw9DpBTS2MpcFETtCrw%3D%3D
+2 &lt; X-Akamai-CITISITE: GTDC
+2 &lt; Content-Length: 116
+2 &lt; Date: Sun, 01 May 2022 14:08:55 GMT
+2 &lt; Connection: close
+2 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415335000; Expires=Sat, 08 Aug 54353 00:06:30 GMT; Domain=sandbox.apihub.citi.com; Secure
+404 Not Found: Requested route (&#39;aad-p-statefullproc-xd-ap-uat1.apps-mw1-perf.apac.nsroot.net:443&#39;) does not exist.
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref failed">54</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.54">19:39:50.003 src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:54
+Then status 400
+status code was: 404, expected: 400, response time in milliseconds: 516, url: https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage, response: 
+404 Not Found: Requested route (&#39;aad-p-statefullproc-xd-ap-uat1.apps-mw1-perf.apac.nsroot.net:443&#39;) does not exist.
+
+src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:54
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref skipped">55</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref skipped">56</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.type == &#39;invalid&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.57">
+      <div class="step-ref skipped">57</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;invalidRequest&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.58">
+      <div class="step-ref skipped">58</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.details == &#39;Missing or invalid parameters&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:60]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:60]</span>
+                <span class="scenario-name">Verify the LinkageAPI with invalid merchantCustomerReferenceId in body parameters</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1914</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:60]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/clientCredentials/oauth2/token/hk/gcb&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-www-form-urlencoded&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;grant_type=client_credentials&amp;scope=/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">937</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">19:39:50.007 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/clientCredentials/oauth2/token/hk/gcb
+1 &gt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Content-Length: 40
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+grant_type=client_credentials&amp;scope=/api
+
+19:39:50.942 response time in milliseconds: 935
+1 &lt; 200
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; Content-Type: application/json
+1 &lt; Content-Type: application/json
+1 &lt; X-Global-Transaction-ID: 6e68aa42626e9477cb7a5b7f
+1 &lt; X-Akamai-True-Client-IP: 85.154.175.224
+1 &lt; Pragma: no-cache
+1 &lt; X-DataStream-Session-Id: a11f57161-626e9477-141d085a
+1 &lt; X_AK_SHAPE_AGGREGATOR_IP: FALSE
+1 &lt; X-Akamai-CONFIG-LOG-DETAIL: true
+1 &lt; Akamai-Origin-Hop: 2
+1 &lt; X-Forwarded-For: 85.154.175.224, 82.178.158.46
+1 &lt; Cache-Control: no-cache, max-age=0
+1 &lt; X-Client-IP: 23.221.23.115,169.175.115.121,169.177.209.51
+1 &lt; dmz-global-txn-id: 6e68aa42626e9477cb7a5b7f
+1 &lt; X-Archived-Client-IP: 23.221.23.115,23.221.23.115,169.175.115.121
+1 &lt; countryCode: HK
+1 &lt; businessCode: GCB
+1 &lt; scope: /api
+1 &lt; channelId: SSA
+1 &lt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa,5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+1 &lt; client_secret: uG2yJ7aN2vD3dW3tL7uU8fJ8tM8oG2wR0qP0kG6aC0jX5eP2hY
+1 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,54;
+1 &lt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Content-Length: 393
+1 &lt; Date: Sun, 01 May 2022 14:08:56 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415336000; Expires=Sat, 08 Aug 54353 00:23:10 GMT; Domain=sandbox.apihub.citi.com; Secure
+1 &lt; Set-Cookie: _abck=6D12BC1C99960AA03B34C071C68F9610~-1~YAAQLp6yUg5X8HKAAQAAkvXzfwf8qTQzEY9KGLuRY/J22Sg4tU54I6fJrH39M+GMnqF1YA66ddnLkE7r0LyFvmN35wR1H7/rpATxkx5Nis8Iff4YQXRsUaTHDJzv5F0M8XbwdBklX8ZZ8IMX1oeHjFlAzrayM8HLJ5YnBHLLjA2wC1tAIFgUOxWergFYYAcx8JET8djhMgU85R256Kn+3/aoM0F1VPyWG3dnDQXDXOyqBezABToNb3+mLbAIJj5xU/VVKbbyN43xoQ1UTP1A8CbQ6vPuBF4pBZ4XvrtR6z/METlY+Bnk4mPgwW9Z+DKrF0oVkPuhpYzrK7Ob7kCSlxeMAQ/R+0Ytu8BWG8DePn281cndqFitc80=~-1~-1~-1; Max-Age=1682950136000; Expires=Fri, 24 Nov 55352 03:03:10 GMT; Domain=citi.com; Secure
+1 &lt; Set-Cookie: bm_sz=69C9EF140FC6E6EF24F3AD091F0D7320~YAAQLp6yUg9X8HKAAQAAkvXzfw97oIKvVihGk1mLE0Rv40t41VxwqkaPwschexuHhkp1kKJVEAKtFRZ6yJQZaebyK3waUZK/soTXGDJVBFe2Wzccvr13DceKT7CesgDHA/+00NVnwag1CJLJ4cPFKy1NQkxZzSux4qTJjAugFLW2SY7L4HGK6RmRHAEbYLvuftxQbH/lUkeAmOu4GtdgBSY7KpQjxlvomAq20W9Q8PZ7ADIysRC1hpWAD825B/oXt6OURogXD3CLw65SzUUDfYIiWTGlYmqYpdTce14UPWGt~4408130~4403765; Max-Age=1651428535000; Expires=Thu, 07 Jan 54354 18:46:30 GMT; Domain=citi.com
+{ &quot;token_type&quot;:&quot;Bearer&quot;, &quot;access_token&quot;:&quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhZsOgZcIVW3NgmU46QxRu11TTZl3qaEdsR5-K0KdwplhLAm9l-XrgXXicVPlbW4btNeOk9UmRvrGHQLl7TvboABiZuQ59u3xYeW-BAotiBs2nU7X5VEbyslhfIMDgCVADn2KLurywCKoD6VfbqRgJT66afXzWVmCyedstpsuX1jG1-JVx36guMwsf-3IxMPfG1yN3oTeYcgiVP63UHAQEVoHpxP_PHpgkZs2JLZYnwZ0&quot;, &quot;expires_in&quot;:1800, &quot;consented_on&quot;:1651414136, &quot;scope&quot;:&quot;/api&quot; }
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">19:39:50.943 [print] {
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;access_token&quot;: &quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhZsOgZcIVW3NgmU46QxRu11TTZl3qaEdsR5-K0KdwplhLAm9l-XrgXXicVPlbW4btNeOk9UmRvrGHQLl7TvboABiZuQ59u3xYeW-BAotiBs2nU7X5VEbyslhfIMDgCVADn2KLurywCKoD6VfbqRgJT66afXzWVmCyedstpsuX1jG1-JVx36guMwsf-3IxMPfG1yN3oTeYcgiVP63UHAQEVoHpxP_PHpgkZs2JLZYnwZ0&quot;,
+  &quot;expires_in&quot;: 1800,
+  &quot;consented_on&quot;: 1651414136,
+  &quot;scope&quot;: &quot;/api&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.token_type == &#39;Bearer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.access_token != null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accessToken = response.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;AccessToken&#39;, accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">19:39:50.944 [print] AccessToken AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhZsOgZcIVW3NgmU46QxRu11TTZl3qaEdsR5-K0KdwplhLAm9l-XrgXXicVPlbW4btNeOk9UmRvrGHQLl7TvboABiZuQ59u3xYeW-BAotiBs2nU7X5VEbyslhfIMDgCVADn2KLurywCKoD6VfbqRgJT66afXzWVmCyedstpsuX1jG1-JVx36guMwsf-3IxMPfG1yN3oTeYcgiVP63UHAQEVoHpxP_PHpgkZs2JLZYnwZ0 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:60]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def Auth = &#39;Bearer &#39;+accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.62">
+      <div class="step-ref passed">62</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/v1/apac/rewards/linkage&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.63">
+      <div class="step-ref passed">63</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = Auth</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.66">
+      <div class="step-ref passed">66</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header client_id = &#39;5ad84ff6-2ef9-402d-9cba-d12bfcb41faa&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.67">
+      <div class="step-ref passed">67</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;{&quot;lastFourDigitsCardNumber&quot;: &quot;8653&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;6590020056&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;!@#$%^&amp;*()_+&quot;}&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.68">
+      <div class="step-ref passed">68</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">974</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.68">19:39:50.947 request:
+2 &gt; POST https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage
+2 &gt; Authorization: Bearer AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhZsOgZcIVW3NgmU46QxRu11TTZl3qaEdsR5-K0KdwplhLAm9l-XrgXXicVPlbW4btNeOk9UmRvrGHQLl7TvboABiZuQ59u3xYeW-BAotiBs2nU7X5VEbyslhfIMDgCVADn2KLurywCKoD6VfbqRgJT66afXzWVmCyedstpsuX1jG1-JVx36guMwsf-3IxMPfG1yN3oTeYcgiVP63UHAQEVoHpxP_PHpgkZs2JLZYnwZ0
+2 &gt; Accept: application/json
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+2 &gt; Cookie: _abck=6D12BC1C99960AA03B34C071C68F9610~-1~YAAQLp6yUg5X8HKAAQAAkvXzfwf8qTQzEY9KGLuRY/J22Sg4tU54I6fJrH39M+GMnqF1YA66ddnLkE7r0LyFvmN35wR1H7/rpATxkx5Nis8Iff4YQXRsUaTHDJzv5F0M8XbwdBklX8ZZ8IMX1oeHjFlAzrayM8HLJ5YnBHLLjA2wC1tAIFgUOxWergFYYAcx8JET8djhMgU85R256Kn+3/aoM0F1VPyWG3dnDQXDXOyqBezABToNb3+mLbAIJj5xU/VVKbbyN43xoQ1UTP1A8CbQ6vPuBF4pBZ4XvrtR6z/METlY+Bnk4mPgwW9Z+DKrF0oVkPuhpYzrK7Ob7kCSlxeMAQ/R+0Ytu8BWG8DePn281cndqFitc80=~-1~-1~-1; CITI_SITE=gtdc; bm_sz=69C9EF140FC6E6EF24F3AD091F0D7320~YAAQLp6yUg9X8HKAAQAAkvXzfw97oIKvVihGk1mLE0Rv40t41VxwqkaPwschexuHhkp1kKJVEAKtFRZ6yJQZaebyK3waUZK/soTXGDJVBFe2Wzccvr13DceKT7CesgDHA/+00NVnwag1CJLJ4cPFKy1NQkxZzSux4qTJjAugFLW2SY7L4HGK6RmRHAEbYLvuftxQbH/lUkeAmOu4GtdgBSY7KpQjxlvomAq20W9Q8PZ7ADIysRC1hpWAD825B/oXt6OURogXD3CLw65SzUUDfYIiWTGlYmqYpdTce14UPWGt~4408130~4403765
+2 &gt; Content-Length: 123
+2 &gt; Host: sandbox.apihub.citi.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;lastFourDigitsCardNumber&quot;: &quot;8653&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;6590020056&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;!@#$%^&amp;*()_+&quot;}
+
+19:39:51.919 response time in milliseconds: 971
+2 &lt; 404
+2 &lt; X-Backside-Transport: FAIL FAIL,FAIL FAIL,FAIL FAIL
+2 &lt; Content-Type: text/plain
+2 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+2 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Max-Age: 2147483647
+2 &lt; Cache-Control: no-cache, no-store
+2 &lt; Expires: -1
+2 &lt; Pragma: no-cache
+2 &lt; Uuid: 503a37e5-ebd5-4cae-a3f2-89857ade9304
+2 &lt; X-Application-Context: PSG-SANDBOX:utility,unsecured,stateless,service,regulatory,pcr,onboard,mutualfund,moneymovementpayee,moneymovement,linkage,insurance,hktv,customer,cardauth,card,banking,account,ids,approuting,override,uat1,sandbox,cloud:2
+2 &lt; X-Cf-Routererror: unknown_route
+2 &lt; X-Vcap-Request-Id: ab4caa89-e3e7-4fc2-4af2-595234759394
+2 &lt; X-Global-Transaction-ID: 98b6a370626e947800e4c6ef
+2 &lt; Access-Control-Allow-Origin: 
+2 &lt; Access-Control-Allow-Credentials: true
+2 &lt; mfaCode: hS%2FgrDkGA3Ek4REqSEgdr64hP214uX%2FLdFpq3xpBYCQt7zlM1g2WYrNfFA0xfD1qCyQFqxDMCG0mcmau0iYRPbwAgjT2w3TaAaoxQaPeGhOJVisOJCFkewpyzprdVxBMaORoBuIs4qjQL8oHS%2F68eX8t4pfQo5PSJ%2F2VeiiDHRi0%2Bej%2FgQN%2B1oF3ON4AkeVWnmni8HY7CVIZIsOHceSv%2BJAW9aWDgOsTIV%2FA9gXTEYqTy2sKLp1Hc4Uj6S7ewL23LdAuNFJXBpBJGhj0R7fa9qHV9zrt1bakaTcW0kFG%2B5FxrDhsOM%2BW3fWsx8xxQDoINwE9gyOiSLmjA0cJtq1%2BKSDkovRUFVzQZoCkCU1tDQgNWBwRwvNs%2BVkmEKv2xZBGtoEPvM26RiPBiL%2FerpWD%2B%2BsdNJemQFLTp3STaUcOak6YGnwoN57Ca6LXhBOyyMEE69QBCCJrrHP%2BMGvE7G5Njw%3D%3D
+2 &lt; X-Akamai-CITISITE: GTDC
+2 &lt; Content-Length: 116
+2 &lt; Date: Sun, 01 May 2022 14:08:57 GMT
+2 &lt; Connection: close
+2 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415337000; Expires=Sat, 08 Aug 54353 00:39:51 GMT; Domain=sandbox.apihub.citi.com; Secure
+404 Not Found: Requested route (&#39;aad-p-statefullproc-xd-ap-uat1.apps-mw1-perf.apac.nsroot.net:443&#39;) does not exist.
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.69">
+      <div class="step-ref failed">69</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.69">19:39:51.920 src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:69
+Then status 400
+status code was: 404, expected: 400, response time in milliseconds: 971, url: https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage, response: 
+404 Not Found: Requested route (&#39;aad-p-statefullproc-xd-ap-uat1.apps-mw1-perf.apac.nsroot.net:443&#39;) does not exist.
+
+src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:69
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.70">
+      <div class="step-ref skipped">70</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.71">
+      <div class="step-ref skipped">71</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.type == &#39;invalid&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.72">
+      <div class="step-ref skipped">72</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;invalidRequest&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.73">
+      <div class="step-ref skipped">73</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.details == &#39;Missing or invalid parameters&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:75]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:75]</span>
+                <span class="scenario-name">Verify the LinkageAPI with invalid Authorization credentials in the request</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1233</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5:75]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/clientCredentials/oauth2/token/hk/gcb&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/x-www-form-urlencoded&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;grant_type=client_credentials&amp;scope=/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">422</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">19:39:51.924 request:
+1 &gt; POST https://sandbox.apihub.citi.com/gcb/api/clientCredentials/oauth2/token/hk/gcb
+1 &gt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Content-Length: 40
+1 &gt; Host: sandbox.apihub.citi.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+grant_type=client_credentials&amp;scope=/api
+
+19:39:52.345 response time in milliseconds: 421
+1 &lt; 200
+1 &lt; X-Backside-Transport: OK OK,OK OK,OK OK
+1 &lt; Content-Type: application/json
+1 &lt; Content-Type: application/json
+1 &lt; X-Global-Transaction-ID: ddade3ba626e947984f8af4d
+1 &lt; X-Akamai-True-Client-IP: 85.154.175.224
+1 &lt; Pragma: no-cache
+1 &lt; X-DataStream-Session-Id: a11f57161-626e9479-141d1386
+1 &lt; X_AK_SHAPE_AGGREGATOR_IP: FALSE
+1 &lt; X-Akamai-CONFIG-LOG-DETAIL: true
+1 &lt; Akamai-Origin-Hop: 2
+1 &lt; X-Forwarded-For: 85.154.175.224, 82.178.158.46
+1 &lt; Cache-Control: no-cache, max-age=0
+1 &lt; X-Client-IP: 23.64.120.195,169.175.61.93,153.40.245.130
+1 &lt; dmz-global-txn-id: ddade3ba626e947984f8af4d
+1 &lt; X-Archived-Client-IP: 23.64.120.195,23.64.120.195,169.175.61.93
+1 &lt; countryCode: HK
+1 &lt; businessCode: GCB
+1 &lt; scope: /api
+1 &lt; channelId: SSA
+1 &lt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa,5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+1 &lt; client_secret: uG2yJ7aN2vD3dW3tL7uU8fJ8tM8oG2wR0qP0kG6aC0jX5eP2hY
+1 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Origin: 
+1 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+1 &lt; X-RateLimit-Limit: name=rate-limit-1,60;
+1 &lt; X-RateLimit-Remaining: name=rate-limit-1,58;
+1 &lt; Authorization: Basic NWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhOnVHMnlKN2FOMnZEM2RXM3RMN3VVOGZKOHRNOG9HMndSMHFQMGtHNmFDMGpYNWVQMmhZ
+1 &lt; X-Akamai-CITISITE: GTDC
+1 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Content-Length: 393
+1 &lt; Date: Sun, 01 May 2022 14:08:57 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415337000; Expires=Sat, 08 Aug 54353 00:39:52 GMT; Domain=sandbox.apihub.citi.com; Secure
+1 &lt; Set-Cookie: _abck=D5E72C6CD16DCE89CA06D058E333EEA9~-1~YAAQLp6yUhFX8HKAAQAADPvzfweb6ELBQcJpFSjGQ5HELlJgI6QEukOJ1rlT+5MZ9aH2P3b/P8iEcE5zE3T0CH0qb++05dDorAh7AK/0idF9TBggd0hBNQLDx6RUGVn2n777uyAhoIEhfncik3i6xTrnC3k8xVvwHeNKEQb9CzrZheM1riyyU6WnG+Fb51TszK2cyPTgxIeGB6a4Ly1qCiWMMi6BlwV2FibgTbJTJ6tTxxtbozb5bC7kEfqKPU5Bbta8sHK8Aw3GuKRo/0crbgQTnDto9gNq+O9QKAJQ0bV5Kzbz8nYxXRp4Xb8r5Q2Uaz/ezXLu3bZcDMrS6EWYfNKPQeYX/2WrfeW2HAK1j4gQbvReSnhAicc=~-1~-1~-1; Max-Age=1682950137000; Expires=Fri, 24 Nov 55352 03:19:52 GMT; Domain=citi.com; Secure
+1 &lt; Set-Cookie: bm_sz=90E6E7D7D6D27C912E5C704257B9AE03~YAAQLp6yUhJX8HKAAQAADPvzfw9vOwF0OXzYGc+ZJJKgWwxQcFXYuSZ7WivSDav+wfjR29kHiGSFb0YeC6wiO1D1acq2jWxBh42zPEFxvE4s6NqrouL4kP1mjkisGAqKWJeDhBnqVaadR4JClVwI4CHWnf2ceZVlX6LwliCdJ7HlFsRuywodxchY/lTqtcANCDejpHKom66FawQeIiiyIerYATbL3gPMdiNsCb76qJunSUn90/8nV7Xvxkbz+qDyClk99tpxlyZQ6HaF+eQbsiPe1b7FySrAGwLY1YTM/DoI~3553334~4277556; Max-Age=1651428537000; Expires=Thu, 07 Jan 54354 19:19:52 GMT; Domain=citi.com
+{ &quot;token_type&quot;:&quot;Bearer&quot;, &quot;access_token&quot;:&quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhf8tDAN2m49rc73XT0LswHw7bojsAegAc68m4A6X-H5V-zIZ34dOxxXQ0ZbPB-XnxgCkAqJRLsm3xjL9tQRv3v5Q80FI9nf3jLv8ab9__AAkYFGrtQwbUa6OsU3NU_tbLMUXa-pOZPZ7of79FizGUStBfPhUlglkXifeGt-D4h8PJrDDZy5hKgAgjNsgCOcbMAf1S7ZXnZiXDqe5XOCIt5Wy1Dl904_lK6CAhWjhiJ7I&quot;, &quot;expires_in&quot;:1800, &quot;consented_on&quot;:1651414137, &quot;scope&quot;:&quot;/api&quot; }
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref bg-step">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">19:39:52.346 [print] {
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;access_token&quot;: &quot;AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhf8tDAN2m49rc73XT0LswHw7bojsAegAc68m4A6X-H5V-zIZ34dOxxXQ0ZbPB-XnxgCkAqJRLsm3xjL9tQRv3v5Q80FI9nf3jLv8ab9__AAkYFGrtQwbUa6OsU3NU_tbLMUXa-pOZPZ7of79FizGUStBfPhUlglkXifeGt-D4h8PJrDDZy5hKgAgjNsgCOcbMAf1S7ZXnZiXDqe5XOCIt5Wy1Dl904_lK6CAhWjhiJ7I&quot;,
+  &quot;expires_in&quot;: 1800,
+  &quot;consented_on&quot;: 1651414137,
+  &quot;scope&quot;: &quot;/api&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref bg-step">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.token_type == &#39;Bearer&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.access_token != null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accessToken = response.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;AccessToken&#39;, accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">19:39:52.347 [print] AccessToken AAIkNWFkODRmZjYtMmVmOS00MDJkLTljYmEtZDEyYmZjYjQxZmFhf8tDAN2m49rc73XT0LswHw7bojsAegAc68m4A6X-H5V-zIZ34dOxxXQ0ZbPB-XnxgCkAqJRLsm3xjL9tQRv3v5Q80FI9nf3jLv8ab9__AAkYFGrtQwbUa6OsU3NU_tbLMUXa-pOZPZ7of79FizGUStBfPhUlglkXifeGt-D4h8PJrDDZy5hKgAgjNsgCOcbMAf1S7ZXnZiXDqe5XOCIt5Wy1Dl904_lK6CAhWjhiJ7I 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:75]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def Auth = &#39;Bearer &#39;+accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://sandbox.apihub.citi.com/gcb/api&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;/v1/apac/rewards/linkage&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Bearer 123456&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.82">
+      <div class="step-ref passed">82</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header client_id = &#39;5ad84ff6-2ef9-402d-9cba-d12bfcb41faa&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;{&quot;lastFourDigitsCardNumber&quot;: &quot;8653&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;6590020056&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;6300804530034&quot;}&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">807</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.84">19:39:52.349 request:
+2 &gt; POST https://sandbox.apihub.citi.com/gcb/api/v1/apac/rewards/linkage
+2 &gt; Authorization: Bearer 123456
+2 &gt; Accept: application/json
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; client_id: 5ad84ff6-2ef9-402d-9cba-d12bfcb41faa
+2 &gt; Cookie: _abck=D5E72C6CD16DCE89CA06D058E333EEA9~-1~YAAQLp6yUhFX8HKAAQAADPvzfweb6ELBQcJpFSjGQ5HELlJgI6QEukOJ1rlT+5MZ9aH2P3b/P8iEcE5zE3T0CH0qb++05dDorAh7AK/0idF9TBggd0hBNQLDx6RUGVn2n777uyAhoIEhfncik3i6xTrnC3k8xVvwHeNKEQb9CzrZheM1riyyU6WnG+Fb51TszK2cyPTgxIeGB6a4Ly1qCiWMMi6BlwV2FibgTbJTJ6tTxxtbozb5bC7kEfqKPU5Bbta8sHK8Aw3GuKRo/0crbgQTnDto9gNq+O9QKAJQ0bV5Kzbz8nYxXRp4Xb8r5Q2Uaz/ezXLu3bZcDMrS6EWYfNKPQeYX/2WrfeW2HAK1j4gQbvReSnhAicc=~-1~-1~-1; CITI_SITE=gtdc; bm_sz=90E6E7D7D6D27C912E5C704257B9AE03~YAAQLp6yUhJX8HKAAQAADPvzfw9vOwF0OXzYGc+ZJJKgWwxQcFXYuSZ7WivSDav+wfjR29kHiGSFb0YeC6wiO1D1acq2jWxBh42zPEFxvE4s6NqrouL4kP1mjkisGAqKWJeDhBnqVaadR4JClVwI4CHWnf2ceZVlX6LwliCdJ7HlFsRuywodxchY/lTqtcANCDejpHKom66FawQeIiiyIerYATbL3gPMdiNsCb76qJunSUn90/8nV7Xvxkbz+qDyClk99tpxlyZQ6HaF+eQbsiPe1b7FySrAGwLY1YTM/DoI~3553334~4277556
+2 &gt; Content-Length: 124
+2 &gt; Host: sandbox.apihub.citi.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;lastFourDigitsCardNumber&quot;: &quot;8653&quot;,&quot;citiCardHolderPhoneNumber&quot;: &quot;6590020056&quot;,&quot;merchantCustomerReferenceId&quot;:&quot;6300804530034&quot;}
+
+19:39:53.155 response time in milliseconds: 805
+2 &lt; 401
+2 &lt; X-Backside-Transport: FAIL FAIL,FAIL FAIL
+2 &lt; Content-Type: application/json
+2 &lt; Access-Control-Allow-Methods: GET,POST,PUT,DELETE
+2 &lt; Access-Control-Allow-Origin: 
+2 &lt; Access-Control-Allow-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Expose-Headers: Accept,Accept-Language,Authorization,businessCode,client_id,content-type,countryCode,uuid,x-ibm-client-id,eventid,sessionID,bizToken,citiuuid, clientDetails,clientdetails,lastFailedLoginTimestamp,lastLoginTime,isFirstTimeLogin,content-disposition,mfaCode,channelindicator,org,relationshipnumber,terminalid,userid,messageid,versionnbr,nextStartIndex,blackbox,deviceprint,devicetokencookie,tmx_session_id,tmx_org_id,flow,tmxSessionId,ChannelId,bizToken,mfaCode,partnerIdentifier,PartnerCustomerID,CitiCustomerRefId,x-idempotency-key,x-fapi-customer-ip-address,x-fapi-cumer-last-logged-time,x-fapi-customer-last-logged-time,x-fapi-financial-id,x-fapi-interaction-id,x-customer-user-agent,x-jws-signature,consumerorgcode,customerReferenceId,Eventid,dataType,if-none-match,if-modified-since
+2 &lt; Access-Control-Allow-Credentials: true
+2 &lt; WWW-Authenticate: Bearer error=&quot;invalid_token&quot;
+2 &lt; X-Global-Transaction-ID: 98b6a370626e947a819fad8d
+2 &lt; X-Akamai-CITISITE: GTDC
+2 &lt; Content-Length: 101
+2 &lt; Date: Sun, 01 May 2022 14:08:58 GMT
+2 &lt; Connection: close
+2 &lt; Set-Cookie: CITI_SITE=gtdc; Max-Age=1651415338000; Expires=Sat, 08 Aug 54353 00:56:33 GMT; Domain=sandbox.apihub.citi.com; Secure
+{ &quot;type&quot;:&quot;unAuthorized&quot;, &quot;code&quot;:&quot;401&quot;, &quot;details&quot;:&quot;Authorization credentials are missing or invalid&quot; }
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.85">
+      <div class="step-ref passed">85</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.86">19:39:53.155 [print] {
+  &quot;type&quot;: &quot;unAuthorized&quot;,
+  &quot;code&quot;: &quot;401&quot;,
+  &quot;details&quot;: &quot;Authorization credentials are missing or invalid&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.87">
+      <div class="step-ref failed">87</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.type == &#39;error&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.87">19:39:53.156 src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:87
+And match response.type == &#39;error&#39;
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  &#39;unAuthorized&#39;
+  &#39;error&#39;
+
+src/test/java/com.FeatureFiles/LinkageAPI_UnitTesting.feature:87
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.88">
+      <div class="step-ref skipped">88</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;unAuthorized&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.89">
+      <div class="step-ref skipped">89</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.details == &#39;Authorization credentials are missing or invalid&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[1:18]","start":1651419530126,"end":1651419534708,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[1:18] 21:08:50.126-21:08:54.708 Verify the LinkageAPI with all mandatory body parameters"},{"id":2,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[2:30]","start":1651419534712,"end":1651419547780,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[2:30] 21:08:54.712-21:09:07.780 Verify the LinkageAPI with invalid lastFourDigitsCardNumber in body parameters"},{"id":3,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[3:45]","start":1651419547782,"end":1651419572588,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[3:45] 21:09:07.782-21:09:32.588 Verify the LinkageAPI with invalid citiCardHolderPhoneNumber in body parameters","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[4:60]","start":1651419572592,"end":1651419574343,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[4:60] 21:09:32.592-21:09:34.343 Verify the LinkageAPI with invalid merchantCustomerReferenceId in body parameters","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[5:75]","start":1651419574348,"end":1651419575647,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[5:75] 21:09:34.348-21:09:35.647 Verify the LinkageAPI with invalid Authorization credentials in the request"},{"id":6,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[6:92]","start":1651419575650,"end":1651419576449,"title":"src\/test\/java\/com.FeatureFiles\/LinkageAPI_UnitTesting[6:92] 21:09:35.650-21:09:36.449 Verify the LinkageAPI with invalid Authorization credentials in the request"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

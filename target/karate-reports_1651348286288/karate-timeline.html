@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/Accounts_And_Transactions[1:4]","start":1651348253276,"end":1651348255105,"title":"src\/test\/java\/com.FeatureFiles\/Accounts_And_Transactions[1:4] 01:20:53.276-01:20:55.105 Retrieve details of all accounts_ Positive Sceneraio"},{"id":2,"group":1,"content":"src\/test\/java\/com.FeatureFiles\/Accounts_And_Transactions[2:22]","start":1651348255109,"end":1651348255109,"title":"src\/test\/java\/com.FeatureFiles\/Accounts_And_Transactions[2:22] 01:20:55.109-01:20:55.109 Retrieve details of all accounts_ Positive Sceneraio","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
